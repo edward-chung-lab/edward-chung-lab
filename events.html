@@ -9,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .event-programme { padding: clamp(20px, 4vw, 36px); }
+      .event-programme h3 { margin: 0 0 12px; color: var(--teal-dark); font-size: 24px; }
+      .event-programme > p { color: var(--muted); line-height: 1.7; }
+      .programme-list { margin: 24px 0 0; }
+      .programme-row { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); }
+      .programme-row dt { color: var(--teal-dark); font-weight: 700; }
+      .programme-row dd { margin: 0; line-height: 1.6; }
+      .programme-row h4 { margin: 0 0 6px; font-size: 16px; }
+      .programme-row p { margin: 4px 0 0; color: var(--muted); }
+      @media (max-width: 600px) { .programme-row { grid-template-columns: 1fr; gap: 6px; } }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -43,9 +55,22 @@
             </div>
             <a class="button secondary dark" href="assets/images/SHUA_Symposium_Program_Flyer_Updated.pdf" target="_blank" rel="noreferrer">Open flyer (PDF) <span aria-hidden="true">&nearr;</span></a>
             <div class="event-pdf">
-              <object data="assets/images/SHUA_Symposium_Program_Flyer_Updated.pdf#view=FitH" type="application/pdf" aria-label="Updated SHUA Symposium 2026 programme flyer" style="display: block; width: 100%; height: min(1300px, 150vw); min-height: 480px;">
-                <p style="padding: 24px;">View the updated symposium programme: <a href="assets/images/SHUA_Symposium_Program_Flyer_Updated.pdf" target="_blank" rel="noreferrer">Open flyer (PDF)</a>.</p>
-              </object>
+              <section class="event-programme" aria-labelledby="programme-title">
+                <h3 id="programme-title">Symposium programme</h3>
+                <p>Each invited talk is 30 minutes. See the flyer for full talk titles and affiliations.</p>
+                <dl class="programme-list">
+                  <div class="programme-row"><dt>08:30–09:00</dt><dd>Registration</dd></div>
+                  <div class="programme-row"><dt>09:00–09:05</dt><dd><h4>Opening remarks</h4><p>Edward Chung</p></dd></div>
+                  <div class="programme-row"><dt>09:05–10:35</dt><dd><h4>Session 01 · On-Demand Urban Mobility &amp; Logistics</h4><p>Wei Liu · Sen Li · Jintao Ke</p></dd></div>
+                  <div class="programme-row"><dt>10:35–10:50</dt><dd>Networking break</dd></div>
+                  <div class="programme-row"><dt>10:50–12:20</dt><dd><h4>Session 02 · Traffic Network Control &amp; Connected Vehicles</h4><p>Keshuang Tang · Yangbeibei Ji · Zhibin Chen</p></dd></div>
+                  <div class="programme-row"><dt>12:20–14:00</dt><dd>Lunch break</dd></div>
+                  <div class="programme-row"><dt>14:00–15:30</dt><dd><h4>Session 03 · Traffic &amp; Travel Modeling for Resilient Mobility</h4><p>Min Xu · Hong Zhu · Wei Ma</p></dd></div>
+                  <div class="programme-row"><dt>15:30–15:50</dt><dd>Networking break</dd></div>
+                  <div class="programme-row"><dt>15:50–17:20</dt><dd><h4>Session 04 · Adaptive Operations of Public Transport</h4><p>Weihua Gu · Wenzhe Sun · Andy Chow</p></dd></div>
+                  <div class="programme-row"><dt>17:20–17:30</dt><dd><h4>Closing remarks</h4><p>Keshuang Tang</p></dd></div>
+                </dl>
+              </section>
             </div>
           </article>
         </section>
